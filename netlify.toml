@@ -1,0 +1,111 @@
+# ============================================================
+#  COWORKDOC — Netlify Configuration
+#  netlify.toml
+#
+#  Place this file in the ROOT of your CoworkDoc folder.
+#  Netlify reads it automatically on deployment.
+# ============================================================
+
+# ── BUILD SETTINGS ──────────────────────────────────────────
+# Static site — no build command needed.
+# Publish directory is the root folder itself.
+
+[build]
+  publish = "."
+
+# ── REDIRECTS ───────────────────────────────────────────────
+
+[[redirects]]
+  from = "/home"
+  to   = "/"
+  status = 301
+
+[[redirects]]
+  from = "/index"
+  to   = "/"
+  status = 301
+
+# Redirect /contact/ (with trailing slash) to /contact.html
+[[redirects]]
+  from = "/contact/"
+  to   = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/about/"
+  to   = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/ent/"
+  to   = "/ent-nose.html"
+  status = 301
+
+[[redirects]]
+  from = "/tmj/"
+  to   = "/tmj.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy/"
+  to   = "/privacy.html"
+  status = 301
+
+# ── CUSTOM 404 ───────────────────────────────────────────────
+
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+# ── HEADERS ─────────────────────────────────────────────────
+# Security headers applied to all pages.
+
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    # Prevent clickjacking
+    X-Frame-Options = "DENY"
+
+    # Prevent MIME sniffing
+    X-Content-Type-Options = "nosniff"
+
+    # Basic XSS protection
+    X-XSS-Protection = "1; mode=block"
+
+    # Only send referrer on same origin
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # HTTPS only for 1 year
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+    # Permissions policy — disable unused browser features
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/translations/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ── NETLIFY FORMS ────────────────────────────────────────────
+# Netlify automatically detects the contact form because the
+# HTML has the netlify attribute. No extra config needed here.
+# After first deployment, check:
+# Netlify dashboard → Site → Forms → "contact"

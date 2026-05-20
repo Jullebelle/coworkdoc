@@ -1,0 +1,40 @@
+# ============================================================
+#  COWORKDOC — robots.txt
+#  Tells search engine crawlers what to index.
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Keep 404 and privacy pages out of search results
+# (privacy has noindex meta tag too — belt and braces)
+Disallow: /404.html
+Disallow: /privacy.html
+
+# Sitemap location
+Sitemap: https://coworkdoc.com/sitemap.xml
+
+# ── AI CRAWLERS ─────────────────────────────────────────────
+# Allow all AI crawlers full access
+# llms.txt provides a clean plain-text summary for AI systems
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Point AI systems to the llms.txt summary file
+# https://coworkdoc.com/llms.txt

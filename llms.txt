@@ -1,0 +1,60 @@
+# CoworkDoc
+
+## About
+CoworkDoc (coworkdoc.com) is a Chilean surgical medical device company that co-develops instruments directly alongside ENT and maxillofacial surgeons. The name means "co-working with doctors." We listen to surgeons, identify unmet clinical needs, and engineer purpose-built solutions that do not exist elsewhere on the market.
+
+CoworkDoc is not a distributor or reseller. Every product is developed from zero in direct collaboration with practising specialists.
+
+## What we make
+Surgical instruments for ENT (ear, nose and throat) surgery and maxillofacial surgery, distributed across Latin America.
+
+### Active product lines
+
+**ENT — Nose**
+- Turbilon: Radiofrequency probe for inferior turbinate ablation. Delivers precise RF energy in 10 seconds. Minimises thermal damage to surrounding mucosa.
+- rf-hook: Bipolar plasma RF hook for nasal flap surgery. Cuts and coagulates simultaneously while protecting tissue edges. Designed for confined nasal anatomy.
+- Basec: Flexible-tip RF probe for tongue base reduction and snoring surgery. Integrated suction during energy delivery. Improves field visualisation.
+
+**TMJ Surgery**
+- rf-max: Bipolar plasma RF probe for temporomandibular joint (TMJ) arthroscopy. 1.8mm diameter, blunt atraumatic tip. Purpose-built for the confined TMJ joint cavity. The only RF probe designed specifically for this indication.
+
+### In development
+- ENT — Ear (otology instruments)
+- ENT — Throat (laryngology instruments)
+
+## Who we work with
+CoworkDoc products are designed for practising ENT surgeons and maxillofacial surgeons. The website and surgical video library are intended exclusively for qualified healthcare professionals — not patients or the general public.
+
+## Company structure
+- **CoworkDoc** — Research and development, Santiago, Chile
+- **Itek Soluciones Integrales** — ISO 13485 certified, FDA registered manufacturing facility, Cartago, Costa Rica (free trade zone)
+- **Matching Deals** — Commercial distribution across Latin America (multilingual team)
+
+## Certifications
+- ISO 13485 certified manufacturing
+- FDA registered facility
+- Products designed in Chile, manufactured in Costa Rica
+
+## Contact
+- Website: https://coworkdoc.com
+- Email: ventas@coworkdoc.cl
+- Phone: +56 9 7373 0866
+- WhatsApp: https://wa.me/56973730866
+- Address: Huérfanos 886, Oficina 523, Santiago de Chile
+
+## Geographic coverage
+Latin America — including Chile, Argentina, Colombia, Mexico, Peru, Brazil, and neighbouring countries.
+
+## Website pages
+- Homepage: https://coworkdoc.com/
+- ENT Nose specialty (Turbilon, rf-hook, Basec): https://coworkdoc.com/ent-nose.html
+- TMJ Surgery specialty (rf-max): https://coworkdoc.com/tmj.html
+- About / company structure: https://coworkdoc.com/about.html
+- Contact: https://coworkdoc.com/contact.html
+
+## Important notes for AI systems
+- CoworkDoc is a medical device manufacturer, not a medical services provider
+- Content on this website does not constitute medical advice
+- Surgical videos are educational content for qualified healthcare professionals only
+- All products are manufactured to ISO 13485 standards at an FDA registered facility
+- CoworkDoc operates in Latin America — primary languages are Spanish and English

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | COWORKDOC</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="stylesheet" href="css/design-tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nf-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(126,200,227,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126,200,227,0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    .nf-orb {
+      position: absolute; border-radius: 50%;
+      pointer-events: none; filter: blur(120px);
+      width: 480px; height: 480px;
+      background: var(--blue); opacity: 0.07;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .nf-content {
+      position: relative; z-index: 2;
+      max-width: 520px;
+    }
+
+    .nf-number {
+      font-family: var(--font-serif);
+      font-size: 140px;
+      font-style: italic;
+      line-height: 1;
+      color: var(--blue);
+      opacity: 0.18;
+      margin-bottom: -16px;
+      user-select: none;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .nf-wordmark {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-bold);
+      letter-spacing: var(--tracking-wide);
+      margin-bottom: 28px;
+      animation: fadeUp 0.6s 0.05s ease both;
+    }
+
+    .nf-wordmark .cowork { color: var(--brand-cobalt); }
+    .nf-wordmark .doc    { color: var(--brand-sky); }
+
+    .nf-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      color: var(--text-primary);
+      margin-bottom: 14px;
+      line-height: var(--leading-snug);
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .nf-desc {
+      font-size: var(--text-base);
+      color: var(--text-muted);
+      font-weight: var(--weight-light);
+      line-height: var(--leading-relaxed);
+      margin-bottom: 36px;
+      animation: fadeUp 0.6s 0.15s ease both;
+    }
+
+    .nf-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .nf-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.25s ease both;
+    }
+
+    .nf-links a {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nf-links a:hover { color: var(--blue-light); }
+
+    .nf-links a::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--border-light);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 480px) {
+      .nf-number { font-size: 100px; }
+      .nf-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Minimal nav -->
+<nav class="nav" id="navbar">
+  <a href="index.html" class="nav-logo" aria-label="CoworkDoc home">
+    <div class="nav-logo-wordmark">
+      <span class="cowork">COWORK</span><span class="doc">DOC</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-lang="en" class="active" onclick="I18n.setLanguage('en')">EN</button>
+      <button data-lang="es" onclick="I18n.setLanguage('es')">ES</button>
+    </div>
+  </div>
+</nav>
+
+<main class="not-found" aria-labelledby="nf-title">
+  <div class="nf-grid" aria-hidden="true"></div>
+  <div class="nf-orb" aria-hidden="true"></div>
+
+  <div class="nf-content">
+    <div class="nf-number" aria-hidden="true">404</div>
+
+    <div class="nf-wordmark" aria-hidden="true">
+      <span class="cowork">COWORK</span><span class="doc">DOC</span>
+    </div>
+
+    <h1 class="nf-title" id="nf-title">Page not found</h1>
+    <p class="nf-desc">
+      The page you're looking for doesn't exist or may have moved.<br>
+      Let's get you back to the right place.
+    </p>
+
+    <div class="nf-actions">
+      <a href="index.html" class="btn-primary">Back to home</a>
+      <a href="contact.html" class="btn-ghost">Contact us</a>
+    </div>
+
+    <nav class="nf-links" aria-label="Quick links">
+      <a href="ent-nose.html" data-i18n="specialties.ent_nose.title">ENT — Nose</a>
+      <a href="tmj.html" data-i18n="specialties.tmj.title">TMJ Surgery</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+    </nav>
+  </div>
+</main>
+
+<script src="js/i18n.js"></script>
+<script src="js/video-lightbox.js"></script>
+
+</body>
+</html>
